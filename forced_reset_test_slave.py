@@ -17,9 +17,8 @@ HEARTBEAT_INTERVAL = 1.0  # 秒
 RESET_DELAY_AFTER_SOME = 60  # 任意：スレーブが自動リセットを送るまでの秒（例）
 
 DEVICE = "/dev/sda"
-# SMART 取得コマンド。JSON 出力対応版であれば -j -A を使うとよい
-# smartctl_json = ["smartctl", "-j", "-A", DEVICE]
-SMARTCTL_CMD = ["smartctl", "-A", DEVICE]
+# SMART 取得コマンド
+SMARTCTL_CMD = ["smartctl", "-j", "-A", DEVICE]
 
 # 以下はリセット要求をマスターに送るときの形式
 # 例: "RESET\n" または "RESET <reason>\n" など

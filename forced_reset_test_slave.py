@@ -147,6 +147,7 @@ def schedule_self_reset(delay_sec):
 # ------------------------
 def main():
     log("Slave starting, sending initial SMART")
+    proc = subprocess.Popen(["vlc", "/home/delibot/test/tako.mp4"])
     send_initial_smart()
     schedule_self_reset(SELF_RESET_DELAY)
     heartbeat_loop()
